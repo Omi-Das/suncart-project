@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Hat",
+    "brand": "SunnyDays",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 15,
+    "description": "Wide-brim hat for sun protection at the beach.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Swim Trunks",
+    "brand": "AquaWear",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 8,
+    "description": "Comfortable and quick-drying swim trunks for pool or beach.",
+    "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Sandals",
+    "brand": "FootEase",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Lightweight sandals ideal for summer walks and beach activities.",
+    "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=400&fit=crop",
+    "category": "Footwear"
+  },
+  {
+    "id": 5,
+    "name": "Sunscreen Lotion",
+    "brand": "SkinGuard",
+    "price": 10,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "SPF 50 sunscreen lotion for maximum sun protection.",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop",
+    "category": "Beauty"
+  },
+  {
+    "id": 6,
+    "name": "Beach Towel",
+    "brand": "CoastalComfort",
+    "price": 20,
+    "rating": 4.4,
+    "stock": 6,
+    "description": "Large, absorbent beach towel with vibrant summer patterns.",
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop",
+    "category": "Home"
+  },
+  {
+    "id": 7,
+    "name": "Flip Flops",
+    "brand": "BeachWalk",
+    "price": 8,
+    "rating": 4.3,
+    "stock": 25,
+    "description": "Comfortable flip flops for casual summer wear.",
+    "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop",
+    "category": "Footwear"
+  },
+  {
+    "id": 8,
+    "name": "Bikini Set",
+    "brand": "TropicalVibes",
+    "price": 30,
+    "rating": 4.6,
+    "stock": 5,
+    "description": "Stylish bikini set perfect for beach days.",
+    "image": "https://images.unsplash.com/photo-1562887538-2c8ad49b0d4c?w=400&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 9,
+    "name": "Sun Hat",
+    "brand": "ShadeMaster",
+    "price": 14,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Elegant sun hat with UV protection.",
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 10,
+    "name": "Portable Fan",
+    "brand": "CoolBreeze",
+    "price": 22,
+    "rating": 4.7,
+    "stock": 9,
+    "description": "Battery-powered portable fan for hot days.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop",
+    "category": "Electronics"
+  },
+  {
+    "id": 11,
+    "name": "Ice Cream Maker",
+    "brand": "FrostyDelights",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 4,
+    "description": "Home ice cream maker for delicious summer treats.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    "category": "Kitchen"
+  },
+  {
+    "id": 12,
+    "name": "Beach Umbrella",
+    "brand": "SunBlock",
+    "price": 35,
+    "rating": 4.4,
+    "stock": 7,
+    "description": "Large beach umbrella for shade and protection.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=400&fit=crop",
+    "category": "Outdoor"
+  },
+  {
+    "id": 13,
+    "name": "Sunglasses Case",
+    "brand": "LensGuard",
+    "price": 6,
+    "rating": 4.2,
+    "stock": 30,
+    "description": "Protective case for your favorite sunglasses.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 14,
+    "name": "Summer Dress",
+    "brand": "BreezyWear",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 11,
+    "description": "Light and airy summer dress for warm weather.",
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 15,
+    "name": "Water Bottle",
+    "brand": "HydroFlow",
+    "price": 12,
+    "rating": 4.6,
+    "stock": 16,
+    "description": "Insulated water bottle to stay hydrated in the heat.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=400&fit=crop",
+    "category": "Sports"
+  },
+  {
+    "id": 16,
+    "name": "Beach Ball",
+    "brand": "FunInSun",
+    "price": 5,
+    "rating": 4.3,
+    "stock": 22,
+    "description": "Colorful beach ball for outdoor fun.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    "category": "Sports"
+  },
+  {
+    "id": 17,
+    "name": "Lip Balm",
+    "brand": "MoistCare",
+    "price": 4,
+    "rating": 4.7,
+    "stock": 35,
+    "description": "SPF lip balm to protect your lips from sun damage.",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop",
+    "category": "Beauty"
+  },
+  {
+    "id": 18,
+    "name": "Cooling Towel",
+    "brand": "RefreshTech",
+    "price": 16,
+    "rating": 4.8,
+    "stock": 13,
+    "description": "Instant cooling towel for hot weather relief.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    "category": "Sports"
+  }
+]
