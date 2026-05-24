@@ -1,4 +1,5 @@
 import products from "@/data/products.json";
+import Link from "next/link";
 
 export default function ProductsPage() {
   return (
@@ -46,9 +47,12 @@ export default function ProductsPage() {
                 </span>
               </div>
 
-              <button className="w-full bg-black text-white py-2 rounded-lg">
-                View Details
-              </button>
+              <Link
+                  href={`/products/${product.id}`}
+                  className="bg-black text-white px-4 py-2 rounded"
+                >
+                  View Details
+                </Link>
 
             </div>
           </div>
