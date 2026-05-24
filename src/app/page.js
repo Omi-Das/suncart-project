@@ -1,12 +1,18 @@
-import { toast } from "react-toastify";
+import HeroSection from "./components/home/HeroSection";
+import PopularProducts from "./components/home/PopularProducts";
+import SummerCareTips from "./components/home/SummerCareTips";
+import TopBrands from "./components/home/TopBrands";
 
 export default function Home() {
-
-
   return (
-    <div className="p-10">
-      <h1 className="text-2xl mb-5">Hi</h1>
+    <>
+      <HeroSection />
 
-    </div>
+      <PopularProducts />
+
+      <SummerCareTips />
+
+      <TopBrands />
+    </>
   );
 }
