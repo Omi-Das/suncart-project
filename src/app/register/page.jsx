@@ -26,37 +26,74 @@ const RegisterPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   // Register Submit
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  // const onSubmit = async (e) => {
+  //   e.preventDefault();
 
-    setLoading(true);
-    setErrorMessage("");
+  //   setLoading(true);
+  //   setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget);
+  //   const formData = new FormData(e.currentTarget);
 
-    const user = Object.fromEntries(formData.entries());
+  //   const user = Object.fromEntries(formData.entries());
 
-    const { data, error } = await authClient.signUp.email({
-      email: user.email,
-      password: user.password,
-      name: user.name,
-      image: user.image,
-    });
+  //   const { data, error } = await authClient.signUp.email({
+  //     email: user.email,
+  //     password: user.password,
+  //     name: user.name,
+  //     image: user.image,
+  //   });
 
-    setLoading(false);
+  //   setLoading(false);
 
-    // Error
-    if (error) {
-      setErrorMessage(error.message || "Registration Failed");
-      return;
-    }
+  //   // Error
+  //   if (error) {
+  //     setErrorMessage(error.message || "Registration Failed");
+  //     return;
+  //   }
 
-    // Success
-    if (data) {
-      router.push("/login");
-    }
-  };
+  //   // Success
+  //   if (data) {
+  //     router.push("/login");
+  //   }
+  // };
+const onSubmit = async (e) => {
+  e.preventDefault();
 
+  setLoading(true);
+  setErrorMessage("");
+
+  const formData = new FormData(e.currentTarget);
+
+  const user = Object.fromEntries(formData.entries());
+
+  console.log("Form User Data:", user);
+
+  const { data, error } = await authClient.signUp.email({
+    email: user.email,
+    password: user.password,
+    name: user.name,
+    image: user.image,
+  });
+
+  // Console Log
+  console.log("Registration Data:", data);
+  console.log("Registration Error:", error);
+
+  setLoading(false);
+
+  // Error
+  if (error) {
+    setErrorMessage(error.message || "Registration Failed");
+    return;
+  }
+
+  // Success
+  if (data) {
+    console.log("Registration Successful");
+
+    router.push("/login");
+  }
+};
   // Google Sign In
   const handleGoogleSignin = async () => {
     try {
