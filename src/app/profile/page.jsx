@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import { authClient } from "@/lib/auth-client";
 
 const MyProfilePage = () => {
@@ -8,10 +10,13 @@ const MyProfilePage = () => {
   // Session Data
   const { data: session, isPending } = authClient.useSession();
 
+  // Loading State
   if (isPending) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-2xl font-semibold">Loading...</h1>
+        <h1 className="text-2xl font-semibold">
+          Loading...
+        </h1>
       </div>
     );
   }
@@ -23,6 +28,7 @@ const MyProfilePage = () => {
 
         {/* Title */}
         <div className="text-center mb-10">
+
           <h1 className="text-4xl font-bold text-gray-800">
             My Profile
           </h1>
@@ -58,11 +64,20 @@ const MyProfilePage = () => {
               {session.user.email}
             </p>
 
+            {/* Update Button */}
+            <Link
+              href="/profile/edit-page"
+              className="mt-6 inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl transition"
+            >
+              Update Profile
+            </Link>
+
             {/* Info Cards */}
             <div className="grid md:grid-cols-2 gap-5 w-full mt-10">
 
               {/* Name Card */}
               <div className="border rounded-2xl p-5 bg-gray-50">
+
                 <h3 className="text-sm text-gray-500 mb-2">
                   Full Name
                 </h3>
@@ -74,6 +89,7 @@ const MyProfilePage = () => {
 
               {/* Email Card */}
               <div className="border rounded-2xl p-5 bg-gray-50">
+
                 <h3 className="text-sm text-gray-500 mb-2">
                   Email Address
                 </h3>
@@ -87,6 +103,7 @@ const MyProfilePage = () => {
           </div>
         ) : (
           <div className="text-center">
+
             <h2 className="text-2xl font-semibold text-red-500">
               User Not Logged In
             </h2>
