@@ -25,37 +25,6 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Register Submit
-  // const onSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   setLoading(true);
-  //   setErrorMessage("");
-
-  //   const formData = new FormData(e.currentTarget);
-
-  //   const user = Object.fromEntries(formData.entries());
-
-  //   const { data, error } = await authClient.signUp.email({
-  //     email: user.email,
-  //     password: user.password,
-  //     name: user.name,
-  //     image: user.image,
-  //   });
-
-  //   setLoading(false);
-
-  //   // Error
-  //   if (error) {
-  //     setErrorMessage(error.message || "Registration Failed");
-  //     return;
-  //   }
-
-  //   // Success
-  //   if (data) {
-  //     router.push("/login");
-  //   }
-  // };
 const onSubmit = async (e) => {
   e.preventDefault();
 
@@ -75,26 +44,22 @@ const onSubmit = async (e) => {
     image: user.image,
   });
 
-  // Console Log
   console.log("Registration Data:", data);
   console.log("Registration Error:", error);
 
   setLoading(false);
 
-  // Error
   if (error) {
     setErrorMessage(error.message || "Registration Failed");
     return;
   }
 
-  // Success
   if (data) {
     console.log("Registration Successful");
 
     router.push("/login");
   }
 };
-  // Google Sign In
   const handleGoogleSignin = async () => {
     try {
       await authClient.signIn.social({
@@ -110,7 +75,6 @@ const onSubmit = async (e) => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-5">
       <Card className="w-full max-w-md p-8 shadow-xl rounded-2xl border">
 
-        {/* Title */}
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800">
             Register
@@ -121,14 +85,12 @@ const onSubmit = async (e) => {
           </p>
         </div>
 
-        {/* Error Message */}
         {errorMessage && (
           <div className="bg-red-100 text-red-600 text-sm p-3 rounded-lg mb-4">
             {errorMessage}
           </div>
         )}
 
-        {/* Register Form */}
         <Form onSubmit={onSubmit} className="flex flex-col gap-5">
 
           {/* Name */}
@@ -147,7 +109,6 @@ const onSubmit = async (e) => {
             <FieldError />
           </TextField>
 
-          {/* Photo URL */}
           <TextField
             name="image"
             type="url"
@@ -162,7 +123,6 @@ const onSubmit = async (e) => {
             <FieldError />
           </TextField>
 
-          {/* Email */}
           <TextField
             isRequired
             name="email"
@@ -187,7 +147,6 @@ const onSubmit = async (e) => {
             <FieldError />
           </TextField>
 
-          {/* Password */}
           <TextField
             isRequired
             minLength={8}
@@ -223,7 +182,6 @@ const onSubmit = async (e) => {
             <FieldError />
           </TextField>
 
-          {/* Register Button */}
           <Button
             type="submit"
             isLoading={loading}
@@ -233,7 +191,6 @@ const onSubmit = async (e) => {
           </Button>
         </Form>
 
-        {/* Divider */}
         <div className="flex items-center gap-3 my-6">
           <Separator className="flex-1" />
 
@@ -244,17 +201,15 @@ const onSubmit = async (e) => {
           <Separator className="flex-1" />
         </div>
 
-        {/* Google Login */}
         <Button
           onClick={handleGoogleSignin}
           variant="bordered"
-          className="w-full rounded-lg"
+          className="w-full bg-gray-200 rounded-lg"
         >
           <FcGoogle size={22} />
           Continue with Google
         </Button>
 
-        {/* Login Link */}
         <p className="text-center text-sm text-gray-500 mt-6">
           Already have an account?{" "}
           <Link
