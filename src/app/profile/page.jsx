@@ -6,11 +6,9 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 
 const MyProfilePage = () => {
-
-  // Session Data
+  
   const { data: session, isPending } = authClient.useSession();
 
-  // Loading State
   if (isPending) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -26,7 +24,6 @@ const MyProfilePage = () => {
 
       <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-10">
 
-        {/* Title */}
         <div className="text-center mb-10">
 
           <h1 className="text-4xl font-bold text-gray-800">
@@ -38,11 +35,9 @@ const MyProfilePage = () => {
           </p>
         </div>
 
-        {/* Profile Section */}
         {session?.user ? (
           <div className="flex flex-col items-center">
 
-            {/* Profile Image */}
             <Image
               src={
                 session.user.image ||
@@ -54,17 +49,14 @@ const MyProfilePage = () => {
               className="rounded-full border-4 border-cyan-500 object-cover"
             />
 
-            {/* User Name */}
             <h2 className="text-3xl font-bold text-gray-800 mt-5">
               {session.user.name}
             </h2>
 
-            {/* User Email */}
             <p className="text-gray-500 mt-2 text-lg">
               {session.user.email}
             </p>
 
-            {/* Update Button */}
             <Link
               href="/profile/edit-page"
               className="mt-6 inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl transition"
@@ -72,10 +64,8 @@ const MyProfilePage = () => {
               Update Profile
             </Link>
 
-            {/* Info Cards */}
             <div className="grid md:grid-cols-2 gap-5 w-full mt-10">
 
-              {/* Name Card */}
               <div className="border rounded-2xl p-5 bg-gray-50">
 
                 <h3 className="text-sm text-gray-500 mb-2">
@@ -87,7 +77,6 @@ const MyProfilePage = () => {
                 </p>
               </div>
 
-              {/* Email Card */}
               <div className="border rounded-2xl p-5 bg-gray-50">
 
                 <h3 className="text-sm text-gray-500 mb-2">
