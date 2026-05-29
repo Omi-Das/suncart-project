@@ -24,8 +24,6 @@ const LoginPage = () => {
 
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
-  // Handle Email and Password Authentication
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,7 +33,6 @@ const LoginPage = () => {
     const formData = new FormData(e.currentTarget);
     const user = Object.fromEntries(formData.entries());
 
-    // Trigger Better-Auth email sign-in
     const { data, error } = await authClient.signIn.email({
       email: user.email,
       password: user.password,
@@ -49,34 +46,27 @@ const LoginPage = () => {
     }
 
     if (data) {
-      // Fetch the intended URL saved before redirection
       const redirectPath = localStorage.getItem("redirectAfterLogin");
 
       console.log("Redirect Path:", redirectPath);
 
       if (redirectPath) {
-        // Clean up localStorage and route to the specific product details page
         localStorage.removeItem("redirectAfterLogin");
         router.push(redirectPath);
       } else {
-        // Default fallback to home page
         router.push("/");
       }
     }
   };
 
-  // Handle Google Social Authentication
   const handleGoogleSignin = async () => {
     try {
-      // Get saved path or fallback to home page
       const redirectPath = localStorage.getItem("redirectAfterLogin") || "/";
 
-      // Remove the path from storage if it exists to keep it clean
       if (redirectPath !== "/") {
         localStorage.removeItem("redirectAfterLogin");
       }
 
-      // Trigger Better-Auth social sign-in with dynamic callback
       await authClient.signIn.social({
         provider: "google",
         callbackURL: redirectPath,
@@ -90,7 +80,6 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-5">
       <Card className="w-full max-w-md p-8 shadow-xl rounded-2xl border">
 
-        {/* Title Section */}
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800">
             Login
@@ -101,17 +90,14 @@ const LoginPage = () => {
           </p>
         </div>
 
-        {/* Error Message Display */}
         {errorMessage && (
           <div className="bg-red-100 text-red-600 text-sm p-3 rounded-lg mb-4">
             {errorMessage}
           </div>
         )}
 
-        {/* Credentials Login Form */}
         <Form onSubmit={onSubmit} className="flex flex-col gap-5">
 
-          {/* Email Input Field */}
           <TextField
             isRequired
             name="email"
@@ -136,7 +122,6 @@ const LoginPage = () => {
             <FieldError />
           </TextField>
 
-          {/* Password Input Field */}
           <TextField
             isRequired
             name="password"
@@ -171,7 +156,6 @@ const LoginPage = () => {
             <FieldError />
           </TextField>
 
-          {/* Submit Button */}
           <Button
             type="submit"
             isLoading={loading}
@@ -181,7 +165,6 @@ const LoginPage = () => {
           </Button>
         </Form>
 
-        {/* Visual Divider */}
         <div className="flex items-center gap-3 my-6">
           <Separator className="flex-1" />
           <span className="text-sm text-gray-400 whitespace-nowrap">
@@ -190,7 +173,6 @@ const LoginPage = () => {
           <Separator className="flex-1" />
         </div>
 
-        {/* Google Authentication Button */}
         <Button
           onClick={handleGoogleSignin}
           variant="bordered"
@@ -200,7 +182,6 @@ const LoginPage = () => {
           Continue with Google
         </Button>
 
-        {/* Navigation to Registration */}
         <p className="text-center text-sm text-gray-500 mt-6">
           Don&apos;t have an account?{" "}
           <Link

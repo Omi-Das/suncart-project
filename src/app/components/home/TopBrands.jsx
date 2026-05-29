@@ -25,7 +25,6 @@ export default function TopBrands() {
   return (
     <section className="max-w-7xl mx-auto px-5 py-16">
       
-      {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800">
           Top Brands
@@ -35,14 +34,12 @@ export default function TopBrands() {
         </p>
       </div>
 
-      {/* Brand Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {brands.map((brand, index) => (
           <div
             key={index}
             className={`rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br ${brand.color}`}
           >
-            {/* Brand Circle Icon Placeholder */}
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white shadow flex items-center justify-center">
               <span className="text-lg font-bold text-gray-700">
                 {brand.name.charAt(0)}

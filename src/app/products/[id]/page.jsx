@@ -27,7 +27,6 @@ export default function ProductDetailsPage({ params }) {
     (item) => item.id === Number(resolvedParams.id)
   );
 
-  // সেশন লোড হওয়া বা প্রোডাক্ট না পাওয়া পর্যন্ত লোডিং দেখাবে
   if (isPending || !product) {
     return (
       <div className="p-10 text-center text-2xl">
@@ -39,7 +38,6 @@ export default function ProductDetailsPage({ params }) {
   return (
     <div className="max-w-6xl mx-auto px-5 py-16">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* Image */}
         <div>
           <img
             src={product.image}
@@ -48,7 +46,6 @@ export default function ProductDetailsPage({ params }) {
           />
         </div>
 
-        {/* Content */}
         <div>
           <p className="text-orange-500 font-semibold mb-3">
             {product.category}

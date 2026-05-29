@@ -8,7 +8,6 @@ export default function ProductsPage() {
   return (
     <div className="max-w-7xl mx-auto px-5 py-14 overflow-hidden">
 
-      {/* Heading */}
       <div className="text-center mb-14 animate__animated animate__fadeInDown">
 
         <h1 className="text-5xl font-bold text-gray-800">
@@ -20,7 +19,6 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
         {products.map((product, index) => (
@@ -39,10 +37,8 @@ export default function ProductsPage() {
             }}
           >
 
-            {/* Image Section */}
             <div className="overflow-hidden relative">
 
-              {/* Floating Discount Badge */}
               <div
                 className="
                   absolute top-4 left-4 z-10
@@ -64,8 +60,6 @@ export default function ProductsPage() {
                   transition-transform duration-700
                 "
               />
-
-              {/* Overlay Effect */}
               <div
                 className="
                   absolute inset-0 bg-black/0
@@ -75,10 +69,8 @@ export default function ProductsPage() {
               ></div>
             </div>
 
-            {/* Content */}
             <div className="p-5">
 
-              {/* Product Name */}
               <h2
                 className="
                   text-2xl font-bold text-gray-800
@@ -89,17 +81,14 @@ export default function ProductsPage() {
                 {product.name}
               </h2>
 
-              {/* Brand */}
               <p className="text-sm text-gray-500 mb-3">
                 {product.brand}
               </p>
 
-              {/* Description */}
               <p className="text-gray-600 text-sm mb-5 line-clamp-2 leading-relaxed">
                 {product.description}
               </p>
 
-              {/* Price + Rating */}
               <div className="flex items-center justify-between mb-5">
 
                 <span className="font-bold text-2xl text-black">
@@ -117,7 +106,6 @@ export default function ProductsPage() {
                 </span>
               </div>
 
-              {/* Button */}
               <Link
                 href={`/products/${product.id}`}
                 className="

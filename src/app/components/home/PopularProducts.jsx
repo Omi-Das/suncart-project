@@ -9,7 +9,6 @@ export default function PopularProducts() {
   return (
     <section className="max-w-7xl mx-auto px-5 py-20">
 
-      {/* Section Title */}
       <div className="text-center mb-14 animate__animated animate__fadeInDown">
 
         <h2 className="text-4xl font-bold">
@@ -21,7 +20,6 @@ export default function PopularProducts() {
         </p>
       </div>
 
-      {/* Product Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {popularProducts.map((product, index) => (
@@ -39,7 +37,6 @@ export default function PopularProducts() {
             }}
           >
 
-            {/* Product Image */}
             <div className="overflow-hidden">
 
               <img
@@ -53,7 +50,6 @@ export default function PopularProducts() {
               />
             </div>
 
-            {/* Product Content */}
             <div className="p-5">
 
               <h3 className="text-2xl font-semibold mb-2">

@@ -25,7 +25,6 @@ const EditProfilePage = () => {
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Update User
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
 
@@ -78,20 +77,17 @@ const EditProfilePage = () => {
           </p>
         </div>
 
-        {/* Error Message */}
         {errorMessage && (
           <div className="bg-red-100 text-red-600 text-sm p-3 rounded-lg mb-4">
             {errorMessage}
           </div>
         )}
 
-        {/* Form */}
         <Form
           onSubmit={handleUpdateProfile}
           className="flex flex-col gap-5"
         >
 
-          {/* Name */}
           <TextField
             isRequired
             name="name"
@@ -108,7 +104,6 @@ const EditProfilePage = () => {
             <FieldError />
           </TextField>
 
-          {/* Image */}
           <TextField
             name="image"
             type="url"
@@ -124,7 +119,6 @@ const EditProfilePage = () => {
             <FieldError />
           </TextField>
 
-          {/* Update Button */}
           <Button
             type="submit"
             isLoading={loading}

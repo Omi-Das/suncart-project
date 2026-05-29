@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="bg-black text-white mt-auto">
       <div className="max-w-7xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-8">
 
-        {/* Contact */}
         <div>
           <h2 className="text-xl font-semibold mb-3">
             Contact
@@ -15,7 +14,6 @@ export default function Footer() {
           <p>Phone: +880123456789</p>
         </div>
 
-        {/* Social */}
         <div>
           <h2 className="text-xl font-semibold mb-3">
             Social Links
