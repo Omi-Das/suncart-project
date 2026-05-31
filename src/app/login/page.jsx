@@ -176,7 +176,7 @@ const LoginPage = () => {
         <Button
           onClick={handleGoogleSignin}
           variant="bordered"
-          className="w-full rounded-lg"
+          className="w-full rounded-lg bg-gray-200"
         >
           <FcGoogle size={22} />
           Continue with Google
