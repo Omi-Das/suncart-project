@@ -3,11 +3,12 @@
 import { useState } from "react"; 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false); 
   const { data: session, isPending } = authClient.useSession();
 
@@ -42,9 +43,27 @@ export default function Navbar() {
           flex-col md:flex-row bg-white md:bg-transparent 
           border-b md:border-none p-5 md:p-0 gap-4 md:gap-8 text-lg z-50
         `}>
-          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/products" onClick={() => setIsOpen(false)}>Products</Link>
-          <Link href="/profile" onClick={() => setIsOpen(false)}>My Profile</Link>
+          <Link 
+            href="/" 
+            onClick={() => setIsOpen(false)}
+            className={pathname === "/" ? "text-blue-600 font-semibold" : "text-black"}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/products" 
+            onClick={() => setIsOpen(false)}
+            className={pathname === "/products" ? "text-blue-600 font-semibold" : "text-black"}
+          >
+            Products
+          </Link>
+          <Link 
+            href="/profile" 
+            onClick={() => setIsOpen(false)}
+            className={pathname === "/profile" ? "text-blue-600 font-semibold" : "text-black"}
+          >
+            My Profile
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">
