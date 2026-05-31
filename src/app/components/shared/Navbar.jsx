@@ -60,7 +60,7 @@ export default function Navbar() {
           <Link 
             href="/profile" 
             onClick={() => setIsOpen(false)}
-            className={pathname === "/profile" ? "text-blue-600 font-semibold" : "text-black"}
+            className={pathname === "/profile" ? "text-blue-600 bg-gray font-semibold" : "text-black"}
           >
             My Profile
           </Link>
